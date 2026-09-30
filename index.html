@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bethel Church of God Ministries in Heera Nagar, Ludhiana, Punjab. Join us for worship, prayer, fellowship and spiritual growth.">
+  <title>Bethel Church of God Ministries | Heera Nagar, Ludhiana</title>
+  <style>
+    :root{
+      --green:#164d35;
+      --green2:#236847;
+      --light:#f5f8f3;
+      --gold:#c69a3a;
+      --cream:#fffdf7;
+      --dark:#17231d;
+      --muted:#66736b;
+      --white:#ffffff;
+      --shadow:0 12px 35px rgba(22,77,53,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--dark);
+      background:var(--cream);
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{
+      background:var(--green);
+      color:#fff;
+      font-size:14px;
+      padding:8px 0;
+    }
+    .topbar .container{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,253,247,.97);
+      border-bottom:1px solid #e7ece6;
+      backdrop-filter:blur(10px);
+    }
+    .nav{
+      min-height:88px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .brand img{
+      width:105px;
+      height:72px;
+      object-fit:contain;
+      display:block;
+    }
+    .brand-text strong{
+      display:block;
+      color:var(--green);
+      font-size:18px;
+      line-height:1.15;
+    }
+    .brand-text span{font-size:12px;color:var(--muted)}
+    nav ul{display:flex;list-style:none;gap:24px;align-items:center}
+    nav a{font-weight:700;font-size:14px;color:#34443b}
+    nav a:hover{color:var(--green2)}
+    .menu-btn{display:none;border:0;background:none;font-size:28px;color:var(--green);cursor:pointer}
+
+    .hero{
+      background:
+        linear-gradient(135deg,rgba(22,77,53,.97),rgba(35,104,71,.91)),
+        radial-gradient(circle at top right,#c69a3a55,transparent 40%);
+      color:white;
+      padding:82px 0 76px;
+      overflow:hidden;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:55px;
+      align-items:center;
+    }
+    .eyebrow{
+      color:#e7c56e;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    h1{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(40px,6vw,68px);
+      line-height:1.06;
+      margin-bottom:20px;
+    }
+    .hero p{font-size:18px;max-width:680px;color:#eef6f0}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:999px;
+      font-weight:800;
+      border:2px solid transparent;
+      transition:.2s;
+    }
+    .btn-primary{background:var(--gold);color:#fff}
+    .btn-primary:hover{transform:translateY(-2px)}
+    .btn-light{border-color:#fff;color:#fff}
+    .btn-light:hover{background:#fff;color:var(--green)}
+    .hero-logo{
+      background:rgba(255,255,255,.96);
+      padding:28px;
+      border-radius:28px;
+      box-shadow:0 22px 60px rgba(0,0,0,.2);
+      text-align:center;
+    }
+    .hero-logo img{width:min(290px,100%);height:auto;display:block;margin:auto}
+
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+    .section-head .eyebrow{color:var(--green2)}
+    h2{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(32px,4vw,46px);
+      color:var(--green);
+      margin-bottom:12px;
+    }
+    .section-head p{color:var(--muted)}
+    .about{background:var(--light)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-card{
+      background:white;
+      padding:34px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .about-card h3{color:var(--green);font-family:Georgia,serif;font-size:26px;margin-bottom:12px}
+    .quote{
+      border-left:4px solid var(--gold);
+      padding:12px 0 12px 20px;
+      color:#405047;
+      font-style:italic;
+      margin-top:20px;
+    }
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .service{
+      padding:27px 22px;
+      background:#fff;
+      border:1px solid #e5ebe6;
+      border-radius:var(--radius);
+      box-shadow:0 8px 25px rgba(22,77,53,.06);
+    }
+    .service .icon{font-size:30px;margin-bottom:12px}
+    .service h3{color:var(--green);margin-bottom:8px;font-size:20px}
+    .service p{color:var(--muted);font-size:14px}
+    .badge{
+      display:inline-block;
+      margin-top:14px;
+      background:#edf5ef;
+      color:var(--green);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+    }
+    .schedule{
+      background:var(--green);
+      color:white;
+    }
+    .schedule-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:35px;
+      align-items:center;
+    }
+    .schedule h2{color:white}
+    .schedule p{color:#e6f0e9}
+    .time-card{
+      background:white;
+      color:var(--dark);
+      padding:32px;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .time-card .day{color:var(--green);font-weight:900;text-transform:uppercase;letter-spacing:1px}
+    .time-card .time{font-family:Georgia,serif;font-size:38px;color:var(--green);margin:7px 0}
+
+    .leadership{background:var(--light)}
+    .leaders{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .leader{
+      background:white;
+      padding:30px;
+      text-align:center;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .leader-circle{
+      width:78px;height:78px;border-radius:50%;
+      background:#e9f1eb;
+      color:var(--green);
+      display:grid;place-items:center;
+      margin:0 auto 16px;
+      font-family:Georgia,serif;font-size:26px;font-weight:bold;
+    }
+    .leader h3{color:var(--green);font-size:21px}
+    .leader p{color:var(--muted);font-size:14px}
+
+    .youtube-box{
+      background:#f7f3e8;
+      border:1px solid #eee2c7;
+      border-radius:24px;
+      padding:45px;
+      text-align:center;
+    }
+    .youtube-box h2{color:#3f3522}
+    .youtube-box p{max-width:650px;margin:0 auto 25px;color:#655b47}
+    .yt-btn{
+      display:inline-block;
+      background:#b52323;color:#fff;
+      padding:13px 24px;border-radius:999px;font-weight:800;
+    }
+
+    .contact{background:var(--light)}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .contact-card{
+      background:white;padding:28px;border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .contact-card h3{color:var(--green);margin-bottom:10px}
+    .contact-card p,.contact-card a{color:var(--muted);display:block;margin:5px 0}
+    .contact-card a:hover{color:var(--green)}
+
+    .cta{
+      padding:65px 0;
+      background:linear-gradient(135deg,#f7f3e8,#fffdf7);
+      text-align:center;
+    }
+    .cta h2{margin-bottom:12px}
+    .cta p{color:var(--muted);max-width:650px;margin:0 auto 24px}
+
+    footer{background:#102f22;color:#dce9df;padding:35px 0}
+    .footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}
+    footer strong{color:#fff}
+    footer p{font-size:13px;color:#b9cabe}
+
+    @media(max-width:900px){
+      nav ul{gap:14px}
+      .services-grid{grid-template-columns:repeat(2,1fr)}
+      .hero-grid,.about-grid,.schedule-grid{grid-template-columns:1fr}
+      .hero-logo{max-width:370px;margin:auto}
+    }
+    @media(max-width:720px){
+      .topbar .container{justify-content:center;text-align:center}
+      .nav{min-height:76px}
+      .brand img{width:88px;height:60px}
+      .brand-text strong{font-size:15px}
+      .brand-text span{font-size:10px}
+      .menu-btn{display:block}
+      nav{
+        display:none;
+        position:absolute;
+        top:76px;left:0;right:0;
+        background:var(--cream);
+        border-bottom:1px solid #e5ebe6;
+        padding:15px 4%;
+      }
+      nav.open{display:block}
+      nav ul{flex-direction:column;align-items:flex-start;gap:0}
+      nav li{width:100%}
+      nav a{display:block;padding:12px 0}
+      .hero{padding:60px 0}
+      section{padding:65px 0}
+      .services-grid,.leaders,.contact-grid{grid-template-columns:1fr}
+      .about-card,.time-card,.youtube-box{padding:25px}
+      .time-card .time{font-size:31px}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container">
+      <span>Bethel Church of God Ministries · Heera Nagar, Ludhiana</span>
+      <span>Sunday Worship · 10:00 AM – 1:00 PM</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Bethel Church of God Ministries">
+        <img src="bethel-church-of-god-logo.png" alt="Bethel Church of God Ministries logo">
+        <div class="brand-text">
+          <strong>Bethel Church of God</strong>
+          <span>Ministries · Ludhiana, Punjab</span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+      <nav id="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#sermons">Sermons</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Heera Nagar · Ludhiana · Punjab</div>
+          <h1>Welcome to Bethel Church of God Ministries</h1>
+          <p>
+            A church family where we come together for worship, prayer, fellowship,
+            spiritual growth and service. We welcome you to join us and be part of our church community.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Plan Your Visit</a>
+            <a class="btn btn-light" href="#about">Discover Our Church</a>
+          </div>
+        </div>
+
+        <div class="hero-logo">
+          <img src="bethel-church-of-god-logo.png" alt="Bethel Church of God Ministries">
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">About Us</div>
+          <h2>A Place to Worship, Pray & Grow</h2>
+          <p>Come as you are and join us as we seek God together as a church family.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Our Church Family</h3>
+            <p>
+              Bethel Church of God Ministries is a Christian church in Heera Nagar,
+              Ludhiana, Punjab. Our desire is to provide a welcoming place for worship,
+              prayer, fellowship, Bible learning and service.
+            </p>
+            <p class="quote">
+              “Let us come together in faith, encourage one another, and grow in God's Word.”
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>Everyone Is Welcome</h3>
+            <p>
+              Whether you are visiting a church for the first time or looking for a
+              church family, we invite you to worship with us. Our regular Sunday
+              service is from <strong>10:00 AM to 1:00 PM</strong>.
+            </p>
+            <br>
+            <a class="btn btn-primary" href="#contact">Get Directions & Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Services & Ministries</div>
+          <h2>Gather With Us</h2>
+          <p>Our regular church activities and ministry announcements will be shared here.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service">
+            <div class="icon">⛪</div>
+            <h3>Sunday Worship</h3>
+            <p>Our main weekly gathering for worship, fellowship and the Word of God.</p>
+            <span class="badge">10:00 AM – 1:00 PM</span>
+          </div>
+
+          <div class="service">
+            <div class="icon">📖</div>
+            <h3>Bible Study</h3>
+            <p>Grow together through the study and understanding of God's Word.</p>
+            <span class="badge">Announcement coming soon</span>
+          </div>
+
+          <div class="service">
+            <div class="icon">🙏</div>
+            <h3>Prayer Meeting</h3>
+            <p>A time to pray together, seek God and encourage one another.</p>
+            <span class="badge">Announcement coming soon</span>
+          </div>
+
+          <div class="service">
+            <div class="icon">🌿</div>
+            <h3>Youth Service</h3>
+            <p>A place for young people to connect, worship and grow in faith.</p>
+            <span class="badge">Announcement coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="schedule">
+      <div class="container schedule-grid">
+        <div>
+          <div class="eyebrow">Join Us This Sunday</div>
+          <h2>Worship With Our Church Family</h2>
+          <p>
+            We would be glad to welcome you at Bethel Church of God Ministries.
+            For current announcements and ministry schedules, please contact us directly.
+          </p>
+        </div>
+        <div class="time-card">
+          <div class="day">Sunday Service</div>
+          <div class="time">10:00 AM – 1:00 PM</div>
+          <p>Heera Nagar, Ludhiana, Punjab, India</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="leadership" id="leadership">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Leadership</div>
+          <h2>Serving Our Church</h2>
+          <p>Meet the people serving the Bethel Church of God Ministries community.</p>
+        </div>
+
+        <div class="leaders">
+          <div class="leader">
+            <div class="leader-circle">PM</div>
+            <h3>Pagat Masih</h3>
+            <p>Pastor</p>
+          </div>
+
+          <div class="leader">
+            <div class="leader-circle">AM</div>
+            <h3>Ashish Masih</h3>
+            <p>Leader</p>
+          </div>
+
+          <div class="leader">
+            <div class="leader-circle">V</div>
+            <h3>Victoria</h3>
+            <p>Ministry Team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sermons">
+      <div class="container">
+        <div class="youtube-box">
+          <div class="eyebrow">Sermons & Worship</div>
+          <h2>Watch Us on YouTube</h2>
+          <p>
+            Find worship songs, sermons and church videos on our YouTube channel.
+            New content and updates can be added here as the ministry grows.
+          </p>
+          <a class="yt-btn" href="https://www.youtube.com/@bphcworshipsongs2470" target="_blank" rel="noopener">
+            Visit Our YouTube Channel
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Contact Us</div>
+          <h2>We Would Love to Hear From You</h2>
+          <p>Reach out for service information, prayer, directions or general church enquiries.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>📞 Phone</h3>
+            <a href="tel:+918077729137">+91 80777 29137</a>
+            <a href="tel:+919803722441">+91 98037 22441</a>
+          </div>
+
+          <div class="contact-card">
+            <h3>✉️ Email</h3>
+            <a href="mailto:ashish@bethelchurchofgod.in">ashish@bethelchurchofgod.in</a>
+            <a href="mailto:praise@bethelchurchofgod.in">praise@bethelchurchofgod.in</a>
+          </div>
+
+          <div class="contact-card">
+            <h3>📍 Address</h3>
+            <p>Heera Nagar</p>
+            <p>Ludhiana, Punjab, India</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Heera+Nagar%2C+Ludhiana%2C+Punjab%2C+India" target="_blank" rel="noopener">
+              Open in Google Maps →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>You Are Welcome Here</h2>
+        <p>
+          Join Bethel Church of God Ministries for worship, prayer, fellowship and spiritual growth.
+        </p>
+        <a class="btn btn-primary" href="#contact">Connect With Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>Bethel Church of God Ministries</strong>
+        <p>Heera Nagar · Ludhiana · Punjab · India</p>
+      </div>
+      <p>© <span id="year"></span> Bethel Church of God Ministries. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      menuBtn.textContent = nav.classList.contains('open') ? '×' : '☰';
+    });
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuBtn.textContent = '☰';
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
